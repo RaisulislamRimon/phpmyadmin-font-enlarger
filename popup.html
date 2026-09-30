@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 200px;
+      padding: 15px;
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="label-row">
+      <label for="fontSize">Font Size:</label>
+      <span id="sizeVal">24px</span>
+    </div>
+    <input type="range" id="fontSize" min="12" max="100" value="24">
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

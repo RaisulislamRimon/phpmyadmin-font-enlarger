@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "phpMyAdmin Font Enlarger",
+  "version": "1.1",
+  "description": "Adjust the font size of the SQL editor in phpMyAdmin",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*"],
+      "css": ["style.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

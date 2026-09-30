@@ -1,0 +1,12 @@
+/* Target the main editor container and the code lines */
+.CodeMirror,
+.CodeMirror-scroll,
+.CodeMirror-code,
+.CodeMirror-line {
+    font-size: 24px !important;
+}
+
+/* Adjust the line numbers to match the larger text */
+.CodeMirror-gutter-element {
+    font-size: 24px !important;
+}
