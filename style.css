@@ -1,12 +1,14 @@
-/* Target the main editor container and the code lines */
-.CodeMirror,
-.CodeMirror-scroll,
-.CodeMirror-code,
-.CodeMirror-line {
-    font-size: 24px !important;
+/*
+  We remove almost ALL fixed font-sizing from CSS.
+  Forcing font-size in CSS causes the "drift" because the JavaScript
+  engine in CodeMirror doesn't know the CSS changed.
+*/
+
+.CodeMirror {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
 }
 
-/* Adjust the line numbers to match the larger text */
-.CodeMirror-gutter-element {
-    font-size: 24px !important;
+/* Only target the line height to prevent overlap, but keep it minimal */
+.CodeMirror-line {
+    line-height: 1.2 !important;
 }
