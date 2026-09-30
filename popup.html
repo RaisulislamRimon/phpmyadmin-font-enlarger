@@ -3,32 +3,93 @@
 <head>
   <style>
     body {
-      width: 200px;
+      width: 220px;
       padding: 15px;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
     }
     .container {
       display: flex;
       flex-direction: column;
+      gap: 20px;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
       gap: 10px;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #555;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
     }
     .label-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 14px;
     }
     input[type="range"] {
       width: 100%;
+      cursor: pointer;
+    }
+    .presets {
+      display: flex;
+      gap: 5px;
+      justify-content: space-between;
+    }
+    .presets button {
+      flex: 1;
+      padding: 5px 0;
+      font-size: 12px;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .presets button:hover {
+      background: #eef;
+    }
+    select {
+      width: 100%;
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="label-row">
-      <label for="fontSize">Font Size:</label>
-      <span id="sizeVal">24px</span>
+    <!-- Font Size Section -->
+    <div class="section">
+      <div class="section-title">Text Size</div>
+      <div class="label-row">
+        <label for="fontSize">Font Size:</label>
+        <span id="sizeVal">24px</span>
+      </div>
+      <input type="range" id="fontSize" min="12" max="100" value="24">
+
+      <div class="presets">
+        <button id="presetSmall">Small</button>
+        <button id="presetMedium">Medium</button>
+        <button id="presetLarge">Large</button>
+      </div>
     </div>
-    <input type="range" id="fontSize" min="12" max="100" value="24">
+
+    <!-- Theme Section -->
+    <div class="section">
+      <div class="section-title">Editor Theme</div>
+      <select id="themeMode">
+        <option value="default">Default phpMyAdmin</option>
+        <option value="dark">Professional Dark</option>
+        <option value="contrast">High Contrast (Neon)</option>
+      </select>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
