@@ -12,3 +12,16 @@
 .CodeMirror-line {
     line-height: 1.2 !important;
 }
+
+/* Table Row Highlighting */
+tr:hover {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    cursor: pointer;
+}
+
+/* Compact Mode */
+body.pma-compact-mode td,
+body.pma-compact-mode th {
+    padding: 2px 4px !important;
+    line-height: 1.2 !important;
+}

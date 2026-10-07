@@ -61,6 +61,33 @@
       font-size: 14px;
       cursor: pointer;
     }
+    .help-container {
+      margin-top: 10px;
+      text-align: center;
+    }
+    .help-toggle {
+      font-size: 12px;
+      color: #0066cc;
+      cursor: pointer;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .help-content {
+      display: none;
+      text-align: left;
+      font-size: 11px;
+      color: #666;
+      background: #eee;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    .help-content b {
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -88,7 +115,32 @@
         <option value="default">Default phpMyAdmin</option>
         <option value="dark">Professional Dark</option>
         <option value="contrast">High Contrast (Neon)</option>
+        <option value="dracula">Dracula</option>
+        <option value="solarized">Solarized</option>
+        <option value="ocean">Ocean</option>
       </select>
+    </div>
+
+    <!-- Power User Settings -->
+    <div class="section">
+      <div class="section-title">Power User Suite</div>
+      <div class="label-row">
+        <label for="autoJump">Auto-Jump to SQL</label>
+        <input type="checkbox" id="autoJump">
+      </div>
+      <div class="label-row">
+        <label for="compactMode">Compact Mode</label>
+        <input type="checkbox" id="compactMode">
+      </div>
+    </div>
+
+    <!-- Help Guide Section -->
+    <div class="help-container">
+      <button id="toggleHelp" class="help-toggle">What are these options?</button>
+      <div id="helpContent" class="help-content">
+        <b>Auto-Jump:</b> Automatically returns you to the SQL query tab 2 seconds after a successful execution.<br><br>
+        <b>Compact Mode:</b> Shrinks table spacing to let you see more data rows at once.
+      </div>
     </div>
   </div>
   <script src="popup.js"></script>

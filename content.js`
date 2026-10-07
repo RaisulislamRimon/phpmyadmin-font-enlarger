@@ -101,8 +101,17 @@ const focusSqlEditor = () => {
 };
 
 const jumpToSqlTab = () => {
-    // Directly redirect to the requested URL to ensure it always works
-    window.location.href = 'http://localhost/phpmyadmin/index.php?route=/server/sql';
+    const sqlLink = Array.from(document.querySelectorAll('a')).find(a =>
+        a.textContent.trim() === 'SQL' || a.href.includes('route=/sql') || a.href.includes('sql.php')
+    );
+    if (sqlLink) {
+        sqlLink.click();
+    } else {
+        // Fallback redirection
+        const url = new URL(window.location.href);
+        url.searchParams.set('route', '/sql');
+        window.location.href = url.toString();
+    }
 };
 
 chrome.storage.sync.get(['fontSize', 'themeMode', 'autoJump', 'compactMode'], (result) => {
