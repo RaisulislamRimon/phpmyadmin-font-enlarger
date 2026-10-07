@@ -4,13 +4,29 @@
 🌐 **Language / ভাষা:** English | [বাংলা (Bengali)](README.bn.md)
 ---
 
-A lightweight Google Chrome extension designed specifically for developers and database administrators using **phpMyAdmin**. This extension solves the common issue of small, hard-to-read text in the SQL query editor by allowing users to dynamically adjust the font size in real-time.
+A professional productivity toolkit for developers and database administrators using **phpMyAdmin**. While it started as a tool to fix small, hard-to-read text, it has evolved into a "Power User Suite" that streamlines your database workflow.
 
 ## ✨ Features
-- **Real-time Adjustment**: Change font size instantly using a convenient slider in the extension popup.
-- **Persistence**: Your preferred font size is saved using `chrome.storage`, meaning it stays the same even after page refreshes or browser restarts.
-- **Forced Override**: Uses a specialized JavaScript engine to ensure that phpMyAdmin's default styles don't overwrite your settings.
-- **Low Overhead**: Specifically targeted to run only on `localhost` and `127.0.0.1` to ensure zero impact on your browsing experience across other websites.
+
+### 🔍 Visual Enhancements
+- **Real-time Font Scaling**: Adjust the SQL editor font size instantly (12px to 100px) via the popup slider.
+- **Custom Editor Themes**: Choose from several professional themes:
+  - **Default**: Standard phpMyAdmin look.
+  - **Professional Dark**: Easy on the eyes for night coding.
+  - **High Contrast (Neon)**: High visibility.
+  - **Dracula**: Classic developer palette.
+  - **Solarized**: Soft, reduced-contrast professional theme.
+  - **Ocean**: Deep blue aesthetic.
+- **Compact Mode**: Reduce table padding to increase information density and see more data rows on one screen.
+- **Row Highlighting**: Automatic subtle highlighting of the row your mouse is hovering over in result tables.
+
+### ⚡ Power User Productivity
+- **Smart Jump (Auto-Jump)**: Automatically returns you to the SQL query tab 2 seconds after a successful query execution.
+- **Manual Jump Shortcut**: Press `Ctrl + Shift + G` to jump instantly to the SQL tab from any phpMyAdmin page.
+- **Font Scaling Shortcuts**: 
+  - `Ctrl + Plus (+)`: Increase font size.
+  - `Ctrl + Minus (-)`: Decrease font size.
+- **Auto-Focus**: Automatically places the cursor in the SQL editor upon loading the SQL page.
 
 ## 🛠️ Installation
 1. **Download/Clone this repository** to your local machine.
@@ -21,15 +37,15 @@ A lightweight Google Chrome extension designed specifically for developers and d
 6. **Pin the extension**: Click the puzzle piece icon 🧩 in your Chrome toolbar and pin "phpMyAdmin Font Enlarger" for quick access.
 
 ## 🚀 Usage
-1. Open your phpMyAdmin SQL tab.
-2. Click the extension icon in your toolbar.
-3. Move the slider to your desired font size (12px to 100px).
+1. Open your phpMyAdmin instance.
+2. Click the extension icon in your toolbar to configure themes, font size, and power user settings.
+3. Use the keyboard shortcuts for maximum efficiency.
 
 ## 📂 Project Structure
-- `manifest.json`: Extension configuration.
-- `popup.html` / `popup.js`: User interface for font control.
-- `content.js`: Logic for font injection.
-- `style.css`: Base styles.
+- `manifest.json`: Extension configuration and permissions.
+- `popup.html` / `popup.js`: Control panel for all settings and help guide.
+- `content.js`: Core logic for font injection, theme application, and automation.
+- `style.css`: Visual overrides for the editor and result tables.
 
 ## 📜 License
 This project is open-source and available under the [MIT License](LICENSE).
